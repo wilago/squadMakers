@@ -1,0 +1,7 @@
+{
+  "name": "squadMakers",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
