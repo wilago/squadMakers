@@ -1,0 +1,97 @@
+ion-toolbar{
+    --border-width: 0;
+    background-color: #FDFDFD;
+}
+
+.ico-close{
+   margin: 20px 0px 0px 28px; 
+   width: 16px;
+   height: 16px;
+}
+
+.tittle{
+
+    font-family: 'Readex Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    margin-left: 28px;
+}
+.list-selects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+
+}
+
+.select{
+    margin: 10px; 
+}
+
+.list-selects select{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8D91A5;
+    width: 312px;
+    height: 48px;
+    background: #ECECF2;
+    border: 0px solid;
+    border-radius: 8px 8px 0px 0px;
+    padding: 10px;
+    border-bottom: 1px solid #8D91A5;
+}
+
+.footer{
+    font-family: 'Readex Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    
+}
+
+.footer .btn-cancel{
+    background-color: #D0D7F9;
+    border-radius: 4px; 
+    width: 156px;
+    height: 48px;
+    color: #5C6967;
+  
+}
+
+.footer .btn-filter{
+    background-color: var(--ion-color-primary);
+    border-radius: 4px; 
+    width: 156px;
+    height: 48px;
+    color: #FDFDFD;
+}
+
+ion-select {
+    --background: #ECECF2;
+    --border-radius:8px 8px 0px 0px;
+    --padding-start:10px;
+    border-bottom: 1px solid #8D91A5;
+    
+}
+
+.custom-select {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8D91A5;
+    width: 312px;
+    height: 48px;
+    
+  }

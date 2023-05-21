@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar >
+    <div class="ico-close" (click)="goBack()" >
+      <img src="../../../assets/icon/cancelar.png" alt="">
+    </div>
+    <div class="tittle"><h1>Filtrer pokemon list</h1></div>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="background" scroll-y="false" >
+  
+    <div class="list-selects">
+        <div class="select">
+          <select name="pets" id="pet-select">
+            <option value="">Select movement number</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+        </select>
+        </div>
+        <div class="select">
+          <select name="pets" id="pet-select">
+            <option value="">Select experience level</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+        </select>
+        </div>
+        <div class="select">
+          <select name="pets" id="pet-select">
+            <option value="">Please choose an option</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+        </select>
+        </div>
+    </div> 
+  
+</ion-content>
+
+<ion-footer class="footer">
+    <button class="btn-cancel" >Cancel</button>
+    <button class="btn-filter">Filter</button>
+</ion-footer>

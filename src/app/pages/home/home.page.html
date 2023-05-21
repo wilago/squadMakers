@@ -1,0 +1,55 @@
+
+<ion-content class="background" scroll-y="false">
+  <div id="container">
+    <!-- Init Header -->
+    <div class="header">
+      <div class="title"> What pokemon are you looking for?</div>
+        <div class="buttons">
+              <div class="line-btnsearch" >
+                <input class="btnsearch" 
+                       type="text" 
+                       placeholder="Search Pokemon"
+                       [ngModel]="''" 
+                       (ngModelChange)="handleChange($event)"
+                       >
+                       
+                <img src="../../assets/images/btnSearch.png" alt="image" (click)="searhPoke()">
+              </div>
+            <div class="btnmenu"><a [routerLink]="['/filter']" ><img src="../../assets/images/btnMenu.png" alt="image"></a></div>
+        </div> 
+    </div>
+  <!-- End Header -->
+  </div>
+  <!-- Init Card Pokemon -->
+  <div class="cards">
+    <ion-card *ngFor="let pokemonDetail of pokemonDetails" [routerLink]="['/poke-details',pokemonDetail.id]" >
+      <div class="img-pokemon">
+        <img  alt="Silhouette of mountains" [src]="pokemonDetail.sprites.other.dream_world.front_default" />
+      </div>
+      <ion-card-header>
+        <ion-card-title>{{pokemonDetail.name | titlecase}}</ion-card-title>
+      </ion-card-header>
+      <!-- Init card-content -->
+      <ion-card-content>
+        <div>#{{pokemonDetail.id}}</div>
+        <!-- Init Details Card pokemon -->
+        <div class="details">
+          <div class="detail">Moves<strong> {{pokemonDetail.moves.length}}</strong></div>
+          <div class="detail">Experience<strong>{{pokemonDetail.base_experience}} </strong></div>
+        </div>
+            <!-- Init Show all powers of pokemons -->
+            <div class="types"> <div class="type" *ngFor="let power of pokemonDetail.types "> {{power.type.name | titlecase}}</div> </div>
+            <!-- End Show all powers of pokemons -->
+         <!-- End Details Card pokemon -->
+      </ion-card-content>
+      <!-- End card-content -->
+    </ion-card>
+    <!-- End Card Pokemon -->
+  </div>
+</ion-content>
+<!-- End  content -->
+<ion-footer class="footer">
+  <div><img src="../../assets/icon/footer-left.png" alt="footer-left" *ngIf="previous" (click)="nextPrevious()"></div>
+  <div class="pagination" *ngFor="let post of posts; let i= index"><button>{{i+1}}</button></div>
+  <div><img src="../../assets/icon/footer-rigth.png" alt="footer-rigth" (click)="nextList()"></div> 
+</ion-footer>

@@ -1,0 +1,35 @@
+
+<ion-content >
+    <div class="ico-back color-bckg" (click)="goBack()" >
+      <img src="../../../assets/icon/back.png" alt="">
+    </div>
+  <div class="content-header color-bckg" >
+    <div class="tittle"><h1>{{pokeDetails?.name | titlecase}} <span class="identifi">  #{{pokeDetails?.id}}</span></h1></div>
+    <div  class="img-poke">
+        <img  alt="pokemon" [src]="pokeDetails?.sprites?.other?.dream_world?.front_default" />
+    </div>
+  </div>
+
+<div class="eyelashes">
+  <div id="eyelasheAbout" class="eyelashe " (click)="eyelasheAbout()">About</div>
+  <div id="eyelasheMoves" class="eyelashe" (click)="eyelasheMoves()" >Moves</div>
+</div>
+
+<div class="about" *ngIf="eyelashe_About">
+  <div class="characte">
+    <div class="item"><div class="text">Species: </div><div class="value">{{pokeDetails?.species.name | titlecase}}</div></div>
+    <div class="item"><div class="text">Height: </div><div class="value">{{pokeDetails?.base_experience}}</div></div>
+    <div class="item"><div class="text">Weight: </div><div class="value">{{pokeDetails?.weight}}</div></div>
+    <div class="item"><div class="text">Abilities: </div><div class="value">{{pokeDetails?.abilities.length}}</div></div>
+    <div class="item"><div class="text">Experience: </div><div class="value">{{pokeDetails?.base_experience}}</div></div>
+    <div class="item"><div class="text">Type: </div><div class="value types" *ngFor="let item of pokeDetails?.types">{{item.type.name | titlecase}}</div ></div>
+  </div>
+  <div class="graphics"></div>
+</div>
+
+
+<div class="moves" *ngIf="!eyelashe_About">
+Moves
+</div>
+   
+</ion-content>

@@ -1,0 +1,155 @@
+
+::placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fcfcfc; 
+}
+
+ion-content.background {
+   --background: url(../../../assets/images/banner.jpg) 0 0/100% 234px no-repeat;
+  background-color: #D7D7D7;
+}
+
+ion-card-title{
+  font-family: 'Readex Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #3B3B3B;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 234px;
+  justify-content: center;
+  padding-left: 15px;
+}
+.title {
+  display: flex;
+  align-items: flex-end;
+  width: 275px;
+  height: 56px;
+  font-family: "Readex Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #fcfcfc;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.btnsearch {
+  border: none;
+  width: 209px;
+  background-color: #072ac8;
+  margin: 0px 10px 0px 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fcfcfc;
+}
+
+.btnmenu {
+  margin-left: 50px;
+  padding-top: 5px;
+}
+
+.line-btnsearch {
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+}
+
+.cards{
+  height:100%;
+  overflow: scroll;
+}
+
+.img-pokemon{
+  display: block;
+  width: 360px;
+  background-color: #ECECF2;
+  padding: 10px 0px 5px 0px;
+}
+
+.img-pokemon img {
+  display: block;
+  margin: 0 auto;
+  width:164px;
+  height:173px;
+}
+
+.details{
+  display: flex;
+  flex-direction: row;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 10px;
+  color:  #8D91A5;;
+}
+
+.detail{
+  margin-right: 20px;
+}
+.detail strong{
+  color: #55596D;
+  margin-left: 10px;
+}
+.types{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  color: #8D91A5;
+  margin-top: 10px;
+}
+.type{
+  align-items: center;
+  padding: 5px 10px 5px 8px;
+  margin-right: 20px;
+  background-color:#ECECF2; ;
+  border-radius: 16px;
+
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding:  10px;
+  background-color: #FDFDFD;
+  padding: 20px 16px;
+  height: 80px;
+ 
+}
+
+.footer button{
+  background: none;
+  color: #8D91A5;
+}
+
+.footer button:active{
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #072AC8;
+  color: #FDFDFD;
+}
