@@ -1,7 +1,7 @@
 # Creación de aplicación móvil buscador de pokemon usando Framework de IONIC
 
 Este informe presenta el plan de trabajo y el cronograma actualizado para el desarrollo de una aplicación móvil de buscador de Pokémon utilizando el framework Ionic. 
-
+## Video demostrativo usando celular Android Sansung A10
 https://drive.google.com/file/d/1FOxbX095ykLTv05lkWTffQgI5CVfwGC-/view?usp=sharing
 
 ![image](https://github.com/wilago/squadMakers/assets/27816405/bf1d0c24-77af-40f1-86a5-549c1bb95e31)
