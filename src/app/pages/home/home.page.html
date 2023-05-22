@@ -13,8 +13,16 @@
                        (ngModelChange)="handleChange($event)"
                        >
                        
-                <img src="../../assets/images/btnSearch.png" alt="image" (click)="searhPoke()">
+                <img src="../../assets/images/btnSearch.png" alt="image" (click)="searhPoke(true)">
               </div>
+              <ion-alert
+                  [isOpen]="isAlertOpen"
+                  header="Important information !"
+                  subHeader="The value entered must be a valid name"
+                  message=" Pokemon was not found!"
+                  [buttons]="alertButtons"
+                  (didDismiss)="searhPoke(false)"
+                ></ion-alert>
             <div class="btnmenu"><a [routerLink]="['/filter']" ><img src="../../assets/images/btnMenu.png" alt="image"></a></div>
         </div> 
     </div>

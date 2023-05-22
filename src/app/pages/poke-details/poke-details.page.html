@@ -22,14 +22,34 @@
     <div class="item"><div class="text">Weight: </div><div class="value">{{pokeDetails?.weight}}</div></div>
     <div class="item"><div class="text">Abilities: </div><div class="value">{{pokeDetails?.abilities.length}}</div></div>
     <div class="item"><div class="text">Experience: </div><div class="value">{{pokeDetails?.base_experience}}</div></div>
-    <div class="item"><div class="text">Type: </div><div class="value types" *ngFor="let item of pokeDetails?.types">{{item.type.name | titlecase}}</div ></div>
+    <div class="item">
+      <div class="text">Type:</div>
+      <div  
+      class="value types green" *ngFor="let item of pokeDetails?.types">{{item.type.name | titlecase}}</div >
+    </div>
   </div>
-  <div class="graphics"></div>
+  <div class="graphics">
+    <ion-card class="welcome-card">
+      <ion-card-header>
+        <ion-card-title>Base stats</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- <canvas id="barChart"></canvas> -->
+        <img src="../../../assets/images/charts.png" alt="Charts">
+      </ion-card-content>
+    </ion-card>
+  </div>
 </div>
 
-
 <div class="moves" *ngIf="!eyelashe_About">
-Moves
+  <div class="text">{{pokeDetails?.moves.length}} moves</div>
+  <div class="moves-all">
+    <div class="move green" *ngFor="let item of pokeDetails?.moves;let i =index ">
+        <div class="logo"><img src="../../../assets/icon/sheet.png" alt=""></div>
+        <div class="text">{{item.move.name}}</div>
+
+    </div>
+  </div>
 </div>
    
 </ion-content>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonsService } from '../../services/pokemons.service';
 import { Pokemons } from '../../interfaces';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -14,8 +15,12 @@ export class HomePage implements OnInit {
   public previous= false
   public getDataPoke='';
   public posts = [1, 2, 3, 4, 5];
+  isAlertOpen = false;
+  public alertButtons = ['OK'];
 
-  constructor(private pokemonsService: PokemonsService) { }
+  constructor(private pokemonsService: PokemonsService,
+              private navCtrl: NavController
+              ) { }
 
   ngOnInit(): void {
     this.searchPokemon('?limit=6&offset=0');
@@ -60,13 +65,20 @@ export class HomePage implements OnInit {
   }
 
   handleChange(poke: any) {
-    console.log(poke);
     this.getDataPoke=poke;
   }
 
-  searhPoke(){
-    console.log('searhPoke');
-    this.searchPokemon(this.getDataPoke);
+  searhPoke(isOpen: boolean){
+ 
+    this.pokemonsService.getPokemonByNameId(this.getDataPoke)
+      .then(response => {
+        const idpoke=response.data.id
+        this.navCtrl.navigateForward(`/poke-details/${idpoke}`);
+
+      })
+      .catch(error => {
+        this.isAlertOpen = isOpen;
+      });
   }
 
 }
